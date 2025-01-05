@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services</title>
     <style>
+        /* Global Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -17,20 +18,34 @@
             color: #fff;
             padding: 20px 0;
             text-align: center;
+            position: relative;
         }
 
         nav {
             text-align: center;
+            margin-top: 10px;
         }
 
-        nav a {
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
             text-decoration: none;
             color: #fff;
-            margin: 0 20px;
+            font-size: 1rem;
             position: relative;
+            padding: 5px 0;
         }
 
-        nav a::after {
+        nav ul li a::after {
             content: '';
             position: absolute;
             bottom: -5px;
@@ -42,7 +57,7 @@
             transition: transform 0.3s ease;
         }
 
-        nav a:hover::after {
+        nav ul li a:hover::after {
             transform: scaleX(1);
         }
 
@@ -96,14 +111,21 @@
 
 <body>
 
+    <!-- Header Section -->
     <header>
         <h1>Our Services</h1>
         <nav>
-            <a href="#website">Website Creation</a>
-            <a href="#video">Video Creation</a>
+            <ul>
+                <li><a href="/">home</a></li>
+                <li><a href="/about.html">about</a></li>
+                <li><a href="/service.html">services</a></li>
+                <li><a href="/project.html">Certificates</a></li>
+                <li><a href="/contact.html">contact me</a></li>
+            </ul>
         </nav>
     </header>
 
+    <!-- Services Section -->
     <section id="website" class="service">
         <h2>Website Creation</h2>
         <div class="service-description">

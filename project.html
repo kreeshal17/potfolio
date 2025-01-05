@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Projects Section</title>
+  <style>
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      position: relative;
+      padding: 5px 0;
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    nav ul li a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .projects-section {
+      padding: 60px 20px;
+    }
+
+    .projects-section h2 {
+      font-size: 2rem;
+      color: #2c3e50;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .project-card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-card h3 {
+      font-size: 1.5rem;
+      margin: 15px;
+      color: #2c3e50;
+    }
+
+    .project-card p {
+      padding: 0 15px;
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .project-card a {
+      display: block;
+      text-decoration: none;
+      margin: 15px auto;
+      padding: 10px 15px;
+      border-radius: 5px;
+      background-color: #2c3e50;
+      color: white;
+      width: 80%;
+      text-align: center;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .project-card a:hover {
+      background-color: #1abc9c;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 50px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/service.html">Certificates</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="projects" class="projects-section">
+    <h2>My Certificates</h2>
+    <div id="project-container" class="project-grid"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const projects = [
+      {
+        title: "Generative AI ",
+        description: "This certification showcases proficiency in modern AI tools and frameworks, emphasizing innovative applications using generative AI technologies.",
+        image: "gdsc.jpg",
+        link: "https://www.cloudskillsboost.google/public_profiles/d92eb8ed-3cfb-4cf8-a107-380ae821b260",
+      },
+      {
+        title: "IBM Applied AI Certificate",
+        description: "Earned an industry-recognized credential by mastering essential AI concepts and tools, including machine learning and natural language processing.",
+        image: "ibmskill.jpg",
+        link: "https://www.ibm.com/",
+      },
+      {
+        title: "Certified OS certificate",
+        description: "Demonstrated expertise in operating system concepts, including process management, memory allocation, and file systems, with hands-on practical implementations.",
+        image: "coursera.jpg",
+        link: "https://www.coursera.org/account/accomplishments/verify/57GY6HNA0JZY",
+      },
+      {
+        title: "Graph Theory Mastery",
+        description: "Gained expertise in graph algorithms and their applications through advanced projects and practical learning.",
+        image: "graphtheory.jpg",
+        link: "https://www.coursera.org/account/accomplishments/verify/BCSL7VRWGO2N",
+      },
+      {
+        title: "Microsoft AI Fundamentals",
+        description: "Acquired comprehensive skills in AI fundamentals, aligning with Microsoft's industry standards.",
+        image: "microsoft.jpg",
+        link: "https://www.coursera.org/account/accomplishments/verify/57GY6HNA0JZY",
+      },
+      {
+        title: "Blog Platform: Insights Hub",
+        description: "Created a blogging platform to empower users in sharing insights and ideas with a global audience.",
+        image: "blogspot.jpg",
+        link: "https://blinder17.blogspot.com/",
+      },
+      {
+        title: "IBM DataBase and Transaction Practitioner",
+        description: "Demonstrated advanced proficiency in data science concepts, securing a prestigious IBM certificate.",
+        image: "ibm2skill.jpg",
+        link: "https://www.ibm.com/",
+      },
+    ];
+
+    const renderProjects = () => {
+      const container = document.getElementById("project-container");
+
+      projects.forEach((project) => {
+        const projectCard = document.createElement("div");
+        projectCard.className = "project-card";
+
+        projectCard.innerHTML = `
+          <img src="${project.image}" alt="${project.title}">
+          <h3>${project.title}</h3>
+          <p>${project.description}</p>
+          <a href="${project.link}" target="_blank">View Details</a>
+        `;
+
+        container.appendChild(projectCard);
+      });
+    };
+
+    document.addEventListener("DOMContentLoaded", renderProjects);
+  </script>
+</body>
+
+</html>
