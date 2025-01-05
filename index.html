@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krishal's Portfolio</title>
+    <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
         rel="stylesheet">
     <style>
-        /* Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -19,176 +18,179 @@
             font-family: 'Poppins', sans-serif;
         }
 
+        html,
+        body {
+            height: 100%;
+        }
+
         body {
             background-color: rgb(0, 0, 33);
             color: white;
-            line-height: 1.6;
         }
 
-        a {
-            text-decoration: none;
+        header {
+            margin: 0;
         }
 
-        /* Header Styles */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 80px;
             background-color: rgb(18, 18, 90);
-            padding: 10px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
 
-        nav h1 {
-            font-size: 1.5rem;
-            font-weight: 700;
+        .left {
+            font-size: 15px;
         }
 
         nav ul {
             display: flex;
-            gap: 20px;
-            list-style: none;
+            justify-content: center;
         }
 
         nav ul li {
-            display: inline;
+            list-style: none;
+            margin: 0 21px;
         }
 
         nav ul li a {
+            text-decoration: none;
             color: white;
-            font-size: 1rem;
-            transition: color 0.3s;
         }
 
         nav ul li a:hover {
             color: rgb(237, 250, 230);
+            font-size: 1.2rem;
         }
 
-        /* Main Section */
         .first {
             display: flex;
-            flex-wrap: wrap;
+            justify-content: space-around;
             align-items: center;
-            justify-content: center;
-            margin: 50px auto;
-            max-width: 1200px;
-            padding: 0 20px;
+            margin: 130px 0;
         }
 
-        .first .leftSection {
-            flex: 1 1 45%;
-            text-align: center;
+        .first>div {
+            width: 30%;
         }
 
-        .first .leftSection h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: rgb(237, 250, 230);
+        .leftSection {
+            font-size: 3rem;
         }
 
-        .first .leftSection .purple {
-            color: rgb(73, 199, 48);
-            font-weight: bold;
-        }
-
-        .first .leftSection .btn {
-            display: inline-block;
-            padding: 12px 20px;
-            margin: 10px 5px;
-            background-color: #1e2167;
-            border: 2px solid white;
+        .btn {
+            text-decoration: none;
+            padding: 12px;
+            background: #1e2167;
             color: white;
-            border-radius: 8px;
-            font-size: 1rem;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
             cursor: pointer;
-            transition: background-color 0.3s;
         }
 
-        .first .leftSection .btn:hover {
+        .btn:hover {
             background-color: #00959c;
         }
 
-        .first .rightSection img {
-            max-width: 350px;
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        .rightSection img {
+            width: 80%;
         }
 
-        /* Footer */
+        .purple {
+            color: rgb(73, 199, 48);
+        }
+
+        #element {
+            color: red;
+        }
+
+        .second {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .second h1 {
+            font-size: 1.9rem;
+        }
+
+        .kree {
+            color: gray;
+        }
+
         .footer {
             background-color: #333;
             color: white;
             padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-rights {
             text-align: center;
-            margin-top: 50px;
         }
 
         .footer-social ul {
             list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 10px 0 0 0;
+            margin: 0;
+            padding: 0;
         }
 
-        .footer-social ul li {
-            display: inline;
+        .footer-social li {
+            display: inline-block;
+            margin-right: 15px;
         }
 
-        .footer-social ul li a {
-            color: white;
-            font-size: 1.2rem;
-            transition: color 0.3s;
+        .footer-social a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
         }
 
-        .footer-social ul li a:hover {
+        .footer-social a:hover {
             color: #00aced;
         }
 
-        /* Responsive Design */
+        .footer-social i {
+            font-size: 20px;
+            margin-right: 5px;
+        }
+
         @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+            }
+
             nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 15px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
             }
 
             .first {
                 flex-direction: column;
+                margin: 50px 0;
             }
 
-            .first .leftSection {
-                margin-bottom: 20px;
+            .first>div {
+                width: 100%;
+                text-align: center;
             }
 
-            .first .leftSection h2 {
-                font-size: 2rem;
+            .rightSection img {
+                width: 100%;
             }
 
-            .first .rightSection img {
-                max-width: 80%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            nav h1 {
-                font-size: 1.2rem;
-            }
-
-            nav ul li a {
-                font-size: 0.9rem;
-            }
-
-            .first .leftSection h2 {
-                font-size: 1.5rem;
-            }
-
-            .first .leftSection .btn {
-                font-size: 0.9rem;
-                padding: 8px 15px;
+            .footer {
+                flex-direction: column;
+                text-align: center;
             }
         }
     </style>
@@ -197,47 +199,73 @@
 <body>
     <header>
         <nav>
-            <h1>Krishal's Portfolio</h1>
+            <div class="left">
+                <h1>krishal's portfolio</h1>
+            </div>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/service.html">Services</a></li>
+                <li><a href="/">home</a></li>
+                <li><a href="/about.html">about</a></li>
+                <li><a href="/service.html">services</a></li>
                 <li><a href="/project.html">Certificates</a></li>
-                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/contact.html">contact me </a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- AdSense script and block moved below the header -->
+    <div style="margin: 0; padding: 0; overflow: hidden;">
+        <ins class="adsbygoogle"
+             style="display:block; margin:0; padding:0;"
+             data-ad-client="ca-pub-2843558912015119"
+             data-ad-slot="5164625983"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2843558912015119"
+            crossorigin="anonymous"></script>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
     <main>
         <section class="first">
             <div class="leftSection">
-                <h2>Hi, I’m <span class="purple">Krishal Karna</span></h2>
-                <p>I’m a <span id="element"></span>.</p>
+                Hi my name is <span class="purple">krishal karna</span> and I am a
+                <div><span id="element"></span></div>
                 <div class="button">
                     <a href="https://in.linkedin.com/in/krishalkarna" target="_blank" class="btn">LinkedIn</a>
-                    <a href="https://github.com/kreeshal17" target="_blank" class="btn">GitHub</a>
+                    <a href="https://github.com/kreeshal17" target="_blank" class="btn">Github</a>
                 </div>
             </div>
-            <div class="rightSection">
-                <img src="pg.png.png" alt="Profile Image">
-            </div>
+
+            <div class="rightSection"><img src="pg.png.png" alt="lol"></div>
         </section>
+        <footer>
+            <div class="footer">
+                <div class="footer-rights">
+                    www.krishalkarna.com.np | All rights reserved
+                </div>
+                <div class="footer-social">
+                    <ul style="display: flex; justify-content: space-between;">
+                        <li><a href="https://www.facebook.com/krishalkarna17" target="_blank"><i
+                                    class="fab fa-facebook-f"></i>
+                                Facebook</a></li>
+                        <li><a href="https://www.instagram.com/cre_esh_al/" target="_blank"><i
+                                    class="fab fa-instagram"></i>
+                                Instagram</a></li>
+                        <li><a href="https://twitter.com/krishal7" target="_blank"><i class="fab fa-twitter"></i>
+                                Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </main>
-    <footer class="footer">
-        <div>www.krishalkarna.com.np | All rights reserved</div>
-        <div class="footer-social">
-            <ul>
-                <li><a href="https://www.facebook.com/krishalkarna17" target="_blank">Facebook</a></li>
-                <li><a href="https://www.instagram.com/cre_esh_al/" target="_blank">Instagram</a></li>
-                <li><a href="https://twitter.com/krishal7" target="_blank">Twitter</a></li>
-            </ul>
-        </div>
-    </footer>
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
-            strings: ['Web Developer', 'Video Editor', 'SportsGeek'],
+            strings: ['web developer', 'video editor', 'SportsGeek'],
             typeSpeed: 50,
-            loop: true
         });
     </script>
 </body>
